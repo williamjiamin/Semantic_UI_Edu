@@ -1,0 +1,49 @@
+/*整体padding部分样式*/
+
+.m-padding-tb-small{
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+.m-padding-tb-middle{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.m-padding-tb-big{
+    padding-top: 80px !important;
+    padding-bottom: 100px !important;
+}
+
+
+/*内容文字部分的样式*/
+
+.m-all-normal-text{
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.5 !important;
+    opacity: 0.6 !important;
+
+}
+
+.m-content-text-thin{
+    font-weight: 400 !important;
+}
+
+.m-content-text-spaced{
+    letter-spacing: 2px !important;
+}
+
+.m-content-text-lined{
+    line-height: 2 !important;
+}
+
+.m-content-text-opacity{
+    opacity: 0.6 !important;
+}
+
+/*block块内的样式*/
+
+.m-block-inline{
+    display: inline-block !important;
+}
