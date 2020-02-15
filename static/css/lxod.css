@@ -47,3 +47,10 @@
 .m-block-inline{
     display: inline-block !important;
 }
+
+/*tag的padding设置*/
+
+.m-tags-margin-tb-small{
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
