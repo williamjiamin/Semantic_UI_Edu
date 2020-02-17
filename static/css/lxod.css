@@ -54,3 +54,29 @@
     margin-top: 0.5em !important;
     margin-bottom: 0.5em !important;
 }
+
+/*将需要的文字编程黑色*/
+.m-font-black{
+    color: black;
+}
+
+/*nav bar手机版位置*/
+.m-icon-position{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.m-small-screen-show{
+    display: none !important;
+}
+
+@media screen and (max-width: 500px){
+    .m-small-screen-hide{
+        display: none !important;
+    }
+    .m-small-screen-show{
+        display: block !important;
+    }
+}
