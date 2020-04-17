@@ -32,6 +32,13 @@ body{
 }
 
 
+/*banner的阴影部分*/
+
+.m-shadow-middle{
+    -webkit-box-shadow: rgba(0,0,0,0.20) 5px 5px !important;
+    box-shadow: rgba(0,0,0,0.20) 5px 5px !important;
+}
+
 /*内容文字部分的样式*/
 
 .m-all-normal-text{
