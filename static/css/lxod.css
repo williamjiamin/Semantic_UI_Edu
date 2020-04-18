@@ -88,6 +88,11 @@ body{
 
 /*tag的padding设置*/
 
+.m-tags-margin-tb-big{
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
 .m-tags-margin-tb-small{
     margin-top: 0.5em !important;
     margin-bottom: 0.5em !important;
