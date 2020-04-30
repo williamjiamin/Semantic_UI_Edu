@@ -11,7 +11,7 @@
 <body>
 
 <!--头部导航栏-->
-<nav class="ui inverted attached segment m-padding-tb-small m-shadow-middle">
+<nav class="ui inverted attached segment m-padding-tb-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h1 class="ui yellow header item">乐学偶得-管理后台</h1>
@@ -19,7 +19,7 @@
             <a href="#" class="m-special-tag item m-small-screen-hide"><i class="book icon"></i>文章分类</a>
             <a href="#" class="m-special-tag item m-small-screen-hide"><i class="tasks icon"></i>文章标签</a>
             <a href="#" class="m-special-tag item m-small-screen-hide"><i class="copy icon"></i>历史文章归档</a>
-            <div class="right menu">
+            <div class="right m-special-tag m-small-screen-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
                         <img src="../static/images/lxod_logo.jpeg" alt="" class="ui avatar image">
@@ -27,7 +27,9 @@
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a href="#" class="item">详细信息</a>
+                        <a href="#" class="item">个人中心</a>
+                        <a href="#" class="item">会员的世界</a>
+                        <a href="#" class="item">我的积分</a>
                         <a href="#" class="item">注销</a>
                     </div>
                 </div>
@@ -39,210 +41,187 @@
         <i class="bars icon"></i>
     </a>
 </nav>
+<div class="ui attached inverted pointing menu m-shadow-middle">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" class="item">内容发布</a>
+            <a href="#" class="active item">列表导航</a>
+        </div>
+    </div>
+
+</div>
 
 
 <!--网站内容部分-->
 
 <div class="m-padding-tb-middle">
     <div class="ui container">
-        <!--           内容部分的头部-->
-        <div class="ui top attached segment">
-            <div class="ui middle aligned two column grid">
-                <div class="column">
-                    <h2 class="ui grey header">乐学偶得各类精选内容</h2>
+        <form action="#" method="post" class="ui segment top attached form">
+            <div class="inline fields">
+                <div class="field">
+                    <input type="text" name="title" placeholder="文章标题">
                 </div>
-                <div class="right aligned column">
-                    共计 <h2 class="ui grey header m-block-inline m-content-text-thin">99</h2>个标签种类请选择
-                </div>
-            </div>
-        </div>
-        <div class="ui attached segment">
-            <div class="ui labeled button m-padding-tb-middle">
-                <div class="ui basic blue right pointing label">99865</div>
-                <a href="" class="ui basic blue button">Java全栈架构</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic red right pointing label">99865</div>
-                <a href="" class="ui basic red button">Python全栈架构</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic yellow right pointing label">99865</div>
-                <a href="" class="ui basic yellow button">C#全栈架构</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic purple right pointing label">99865</div>
-                <a href="" class="ui basic purple button">Fintech</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic orange right pointing label">99865</div>
-                <a href="" class="ui basic orange button">量化交易</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic  right pointing label">99865</div>
-                <a href="" class="ui basic  button">未选中标签</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle">
-                <div class="ui basic blue right pointing label">99865</div>
-                <a href="" class="ui basic blue button">Java全栈架构</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic red right pointing label">99865</div>
-                <a href="" class="ui basic red button">Python全栈架构</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic yellow right pointing label">99865</div>
-                <a href="" class="ui basic yellow button">C#全栈架构</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic purple right pointing label">99865</div>
-                <a href="" class="ui basic purple button">Fintech</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic orange right pointing label">99865</div>
-                <a href="" class="ui basic orange button">量化交易</a>
-            </div>
-            <div class="ui labeled button m-padding-tb-middle m-tags-margin-tb-small">
-                <div class="ui basic  right pointing label">99865</div>
-                <a href="" class="ui basic  button">未选中标签</a>
-            </div>
-        </div>
-        <div class="ui top attached segment">
-            <div class="ui segment">
-                <!--                        可以通过mobile/computer reversed进行内容在不同模式下的颠倒操作 -->
-                <div class="ui stackable mobile reversed grid">
-                    <div class="four wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/lxod_logo.jpeg" alt="" class="ui rounded image">
-                        </a>
-                    </div>
-                    <div class="twelve wide column">
-                        <h2 class="ui header m-content-text-opacity">乐学偶得技术文章精华</h2>
-                        <p class="m-all-normal-text">
-                            乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容.</p>
-                    </div>
-                </div>
-                <div class="ui grid">
-                    <div class="five wide column">
-                        <div class="ui orange basic label">资源汇总</div>
-                        <div class="ui blue basic label">William推荐</div>
-                    </div>
-                    <div class="right aligned eleven wide column">
-                        <div class="ui horizontal link list">
-                            <div class="item">
-                                <img src="../static/images/lxod_logo.jpeg" alt="" class="ui avatar image">
-                                <div class="content"><a href="#" class="header">乐学偶得小管家</a></div>
-                            </div>
-                            <div class="item">
-                                <i class="calendar icon"></i>2020年8月8日发布
-                            </div>
-                            <div class="item">
-                                <i class="eye icon"></i>9572643 人看过
-                            </div>
+                <div class="field">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="type">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">分类</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Java</div>
+                            <div class="item" data-value="2">C/C++</div>
+                            <div class="item" data-value="3">Python</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="ui segment">
-                <!--                        可以通过mobile/computer reversed进行内容在不同模式下的颠倒操作 -->
-                <div class="ui stackable mobile reversed grid">
-                    <div class="four wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/lxod_logo.jpeg" alt="" class="ui rounded image">
-                        </a>
-                    </div>
-                    <div class="twelve wide column">
-                        <h2 class="ui header m-content-text-opacity">乐学偶得技术文章精华</h2>
-                        <p class="m-all-normal-text">
-                            乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容.</p>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="recommend" name="recommend">
+                        <label for="recommend">乐学偶得推荐</label>
                     </div>
                 </div>
-                <div class="ui grid">
-                    <div class="five wide column">
-                        <div class="ui orange basic label">资源汇总</div>
-                        <div class="ui blue basic label">William推荐</div>
-                    </div>
-                    <div class="right aligned eleven wide column">
-                        <div class="ui horizontal link list">
-                            <div class="item">
-                                <img src="../static/images/lxod_logo.jpeg" alt="" class="ui avatar image">
-                                <div class="content"><a href="#" class="header">乐学偶得小管家</a></div>
-                            </div>
-                            <div class="item">
-                                <i class="calendar icon"></i>2020年2月2日发布
-                            </div>
-                            <div class="item">
-                                <i class="eye icon"></i>9572643 人看过
-                            </div>
-                        </div>
-                    </div>
+                <div class="field">
+                    <button class="ui blue button"><i class="search icon"></i>筛选</button>
                 </div>
             </div>
-            <div class="ui segment">
-                <!--                        可以通过mobile/computer reversed进行内容在不同模式下的颠倒操作 -->
-                <div class="ui stackable mobile reversed grid">
-                    <div class="four wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/lxod_logo.jpeg" alt="" class="ui rounded image">
-                        </a>
-                    </div>
-                    <div class="twelve wide column">
-                        <h2 class="ui header m-content-text-opacity">乐学偶得技术文章精华</h2>
-                        <p class="m-all-normal-text">
-                            乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容，乐学偶得技术文章精华包括各类编程语言，实战运用，Fintech，建模等内容.</p>
-                    </div>
-                </div>
-                <div class="ui grid">
-                    <div class="five wide column">
-                        <div class="ui orange basic label">资源汇总</div>
-                        <div class="ui blue basic label">William推荐</div>
-                    </div>
-                    <div class="right aligned eleven wide column">
-                        <div class="ui horizontal link list">
-                            <div class="item">
-                                <img src="../static/images/lxod_logo.jpeg" alt="" class="ui avatar image">
-                                <div class="content"><a href="#" class="header">乐学偶得小管家</a></div>
-                            </div>
-                            <div class="item">
-                                <i class="calendar icon"></i>2020年2月2日发布
-                            </div>
-                            <div class="item">
-                                <i class="eye icon"></i>9572643 人看过
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </form>
 
-
-        </div>
-        <!--            内容部分的换页面功能部分-->
-        <div class="ui attached inverted segment">
-            <div class="ui middle aligned two column grid">
-                <div class="column">
-                    <div class="ui animated button" tabindex="0">
-                        <div class="visible content">上一页</div>
-                        <div class="hidden content">
-                            <i class="left arrow icon"></i>
-                        </div>
+        <table class="ui attached table">
+            <thead>
+            <tr>
+                <th>文章编号</th>
+                <th>文章标题</th>
+                <th>文章类型</th>
+                <th>是否推荐</th>
+                <th>发布时间</th>
+                <th>可进行的操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <td>164528</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>164528</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>164528</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>164528</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>144452</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>145475</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>145242</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>175424</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>152485</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tbody>
+            <td>18475</td>
+            <td>乐学偶得文章标题</td>
+            <td>公众号：乐学Fintech</td>
+            <td>乐学偶得官方推荐</td>
+            <td>2022年2月2日 12：22</td>
+            <td>
+                <a href="#" class="ui blue button">更新文章</a>
+                <a href="#" class="ui red button">删除文章</a>
+            </td>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="20">
+                    <div class="ui pagination menu">
+                        <a class="item">上一页</a>
+                        <a class="item">下一页</a>
                     </div>
-                </div>
-                <div class="right aligned column">
-                    <div class="ui animated button" tabindex="0">
-                        <div class="visible content">下一页</div>
-                        <div class="hidden content">
-                            <i class="right arrow icon"></i>
-                        </div>
-                    </div>
+                    <a href="#" class="ui right floated blue button">新增内容</a>
+                </th>
 
-                </div>
-            </div>
-        </div>
+            </tr>
 
-
+            </tfoot>
+        </table>
 
     </div>
-
-
 </div>
 
 
@@ -306,6 +285,10 @@
 <script>
     $('.menu-toggle').click(function () {
         $('.m-special-tag').toggleClass('m-small-screen-hide');
+    });
+
+    $('.menu.dropdown').dropdown({
+        on: 'hover'
     });
 </script>
 
