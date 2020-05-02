@@ -11,6 +11,7 @@
 <body>
 
 <!--头部导航栏-->
+<!--一级导航-->
 <nav class="ui inverted attached segment m-padding-tb-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
@@ -41,11 +42,12 @@
         <i class="bars icon"></i>
     </a>
 </nav>
+<!--二级导航-->
 <div class="ui attached inverted pointing menu m-shadow-middle">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="item">内容发布</a>
-            <a href="#" class="active item">列表导航</a>
+            <a href="#" class="active item">内容发布</a>
+            <a href="#" class="item">列表导航</a>
         </div>
     </div>
 
@@ -57,170 +59,103 @@
 <div class="m-padding-tb-middle">
     <div class="ui container">
         <form action="#" method="post" class="ui segment top attached form">
-            <div class="inline fields">
-                <div class="field">
+            <div class="ui error message"></div>
+            <div class="required field">
+                <div class="ui left labeled input">
+                    <div class="ui selection compact blue basic dropdown label">
+                        <input type="hidden" value="原创内容">
+                        <i class="dropdown icon"></i>
+                        <div class="text">原创内容</div>
+                        <div class="menu">
+                            <div class="item" data-value="原创">原创</div>
+                            <div class="item" data-value="转载">转载</div>
+                            <div class="item" data-value="翻译">翻译</div>
+                        </div>
+                    </div>
                     <input type="text" name="title" placeholder="文章标题">
                 </div>
+            </div>
+            <div class="field">
+                <div class="ui left labeled input">
+                    <label class="ui blue basic label">文章配图地址</label>
+                    <input type="text" name="urlPicture" placeholder="文章配图的url">
+                </div>
+            </div>
+            <div class="two fields">
                 <div class="field">
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="type">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">分类</div>
-                        <div class="menu">
-                            <div class="item" data-value="1">Java</div>
-                            <div class="item" data-value="2">C/C++</div>
-                            <div class="item" data-value="3">Python</div>
+                    <div class="ui left labeled input">
+                        <label class="ui compact blue basic label">文章类别</label>
+                        <div class="ui fluid selection dropdown">
+                            <input type="hidden" name="type">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">文章分类</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Java</div>
+                                <div class="item" data-value="2">C/C++</div>
+                                <div class="item" data-value="3">Fintech</div>
+                                <div class="item" data-value="4">Python</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact blue basic label">文章标签</label>
+                        <div class="ui fluid selection multiple search dropdown">
+                            <input type="hidden" name="tag">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">文章标签</div>
+                            <div class="menu">
+                                <!--                                注意写法-->
+                                <div class="item" data-value="Java">Java</div>
+                                <div class="item" data-value="C/C++">C/C++</div>
+                                <div class="item" data-value="1">Python</div>
+                                <div class="item" data-value="2">Fintech</div>
+                                <div class="item" data-value="3">量化交易</div>
+                                <div class="item" data-value="4">CFA</div>
+                                <div class="item" data-value="5">FRM</div>
+                                <div class="item" data-value="6">CPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">乐学偶得推荐</label>
+                        <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
+                        <label for="recommend">是否乐学偶得推荐</label>
                     </div>
                 </div>
                 <div class="field">
-                    <button class="ui blue button"><i class="search icon"></i>筛选</button>
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="originInfo" name="originInfo" checked class="hidden">
+                        <label for="originInfo">原创声明</label>
+                    </div>
                 </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="comment" name="comment" checked class="hidden">
+                        <label for="comment">允许评论</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="tips" name="tips" class="hidden">
+                        <label for="tips">开通打赏功能</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="field">
+                <textarea name="content" placeholder="文章正文"></textarea>
+            </div>
+            <div class="ui right aligned container">
+                <button type="button" class="ui blue button">发布文章</button>
+                <button class="ui secondary button">保存目前编辑</button>
+                <button class="ui button" onclick="window.history.go(-1)">放弃编辑</button>
             </div>
         </form>
-
-        <table class="ui attached table">
-            <thead>
-            <tr>
-                <th>文章编号</th>
-                <th>文章标题</th>
-                <th>文章类型</th>
-                <th>是否推荐</th>
-                <th>发布时间</th>
-                <th>可进行的操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <td>164528</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>164528</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>164528</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>164528</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>144452</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>145475</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>145242</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>175424</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>152485</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tbody>
-            <td>18475</td>
-            <td>乐学偶得文章标题</td>
-            <td>公众号：乐学Fintech</td>
-            <td>乐学偶得官方推荐</td>
-            <td>2022年2月2日 12：22</td>
-            <td>
-                <a href="#" class="ui blue button">更新文章</a>
-                <a href="#" class="ui red button">删除文章</a>
-            </td>
-            </tbody>
-            <tfoot>
-            <tr>
-                <th colspan="20">
-                    <div class="ui pagination menu">
-                        <a class="item">上一页</a>
-                        <a class="item">下一页</a>
-                    </div>
-                    <a href="#" class="ui right floated blue button">新增内容</a>
-                </th>
-
-            </tr>
-
-            </tfoot>
-        </table>
-
     </div>
 </div>
 
@@ -289,6 +224,19 @@
 
     $('.ui.dropdown').dropdown({
         on: 'hover'
+    });
+
+    $('.ui.form').form({
+       fields : {
+           title : {
+               identifier: 'title',
+               rules:[{
+                   type:'empty',
+                   prompt:'请您输入文章的标题哦～'
+               }]
+           }
+
+       }
     });
 </script>
 
