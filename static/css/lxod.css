@@ -9,6 +9,19 @@ body{
 }
 
 
+/*位置样式*/
+
+.m-fixed{
+    position: fixed !important;
+    z-index: 3 !important;
+}
+
+.m-right-bottom{
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+
 /*整体padding部分样式*/
 
 .m-padding-tb-small{
@@ -24,6 +37,11 @@ body{
 .m-padding-tb-big{
     padding-top: 80px !important;
     padding-bottom: 100px !important;
+}
+
+.m-padding-lr-small{
+    padding-left: 1em !important;
+    padding-right: 1em !important;
 }
 
 .m-padding-lr-responsive{

@@ -7,6 +7,7 @@
     <title>乐学偶得-后台管理页面</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../static/css/lxod.css">
+    <link rel="stylesheet" href="../static/lib/mdEditor/css/editormd.css">
 </head>
 <body>
 
@@ -148,7 +149,41 @@
 
             </div>
             <div class="field">
-                <textarea name="content" placeholder="文章正文"></textarea>
+                <div id="md-content" style="z-index: 2 !important;">
+                    <textarea name="content" placeholder="文章正文" style="display: none">
+                             #### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+
+#### Editor.md directory
+
+    editor.md/
+            lib/
+            css/
+            scss/
+            tests/
+            fonts/
+            images/
+            plugins/
+            examples/
+            languages/
+            editormd.js
+            ...
+
+```html
+&lt;!-- English --&gt;
+&lt;script src="../dist/js/languages/en.js"&gt;&lt;/script&gt;
+
+&lt;!-- 繁體中文 --&gt;
+&lt;script src="../dist/js/languages/zh-tw.js"&gt;&lt;/script&gt;
+```
+
+                    </textarea>
+                </div>
             </div>
             <div class="ui right aligned container">
                 <button type="button" class="ui blue button">发布文章</button>
@@ -217,7 +252,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/lib/mdEditor/editormd.js"></script>
+
 <script>
+    var contentEditor;
+
+    $(function () {
+        contentEditor = editormd("md-content", {
+            width: "100%",
+            height: 640,
+            syncScrolling: "single",
+            path: "../static/lib/mdEditor/lib/"
+        });
+    });
+
     $('.menu-toggle').click(function () {
         $('.m-special-tag').toggleClass('m-small-screen-hide');
     });
@@ -227,16 +275,16 @@
     });
 
     $('.ui.form').form({
-       fields : {
-           title : {
-               identifier: 'title',
-               rules:[{
-                   type:'empty',
-                   prompt:'请您输入文章的标题哦～'
-               }]
-           }
+        fields: {
+            title: {
+                identifier: 'title',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请您输入文章的标题哦～'
+                }]
+            }
 
-       }
+        }
     });
 </script>
 
